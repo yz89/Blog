@@ -44,9 +44,9 @@
 
 > One of the key tasks of a cryptographic proving system is to operate over huge amounts of data, while keeping the numbers small. If you can compress a statement about a large program into a mathematical equation involving a few numbers, but those numbers are as big as the original program, you have not gained anything.
 
-为了在进行复杂算术运算的同时确保数字维持在一个很小的范围内，密码学家通常使用**模运算**。简单来说， 我们选择一些素数 $p$ 。 $\%$ 运算符表示“取余数”： $15 \mod 7=1, 53 \mod 10 = 3$ ，依此类推（请注意，取模的结果始终是非负的，例如 $-1 \mod 10 = 9$ ）。
+为了在进行复杂算术运算的同时确保数字维持在一个很小的范围内，密码学家通常使用**模运算**。简单来说， 我们选择一些素数 pp 。 \%\% 运算符表示“取余数”： 15 \mod 7=1, 53 \mod 10 = 315 \mod 7=1, 53 \mod 10 = 3 ，依此类推（请注意，取模的结果始终是非负的，例如 -1 \mod 10 = 9-1 \mod 10 = 9 ）。
 
-> To do complicated arithmetic while keeping numbers small, cryptographers generally use **modular arithmetic**. We pick some prime "modulus" $p$. The $\%$ operator means "take the remainder of" $15 \% 7=1, 53 \% 10 = 3$, etc (note that the answer is always non-negative, so for example $-1 \% 10 = 9$).
+> To do complicated arithmetic while keeping numbers small, cryptographers generally use **modular arithmetic**. We pick some prime "modulus" pp. The \%\% operator means "take the remainder of" 15 \% 7=1, 53 \% 10 = 315 \% 7=1, 53 \% 10 = 3, etc (note that the answer is always non-negative, so for example -1 \% 10 = 9-1 \% 10 = 9).
 
 <!-- 为了在保持小数字的同时进行复杂的算术运算，密码学家通常使用模算术（取模运算）。我们选择一些素数p。% 运算符表示“取余数”：15 % 7=1,53 % 10=3，依此类推（请注意，取模的结果始终是非负的，例如 −1 % 10=9）。 -->
 
@@ -641,7 +641,7 @@ $$
 345\xrightarrow{\times3}1035\to[1,0,3,5]\xrightarrow{\times8}[8,0,24,40]
 $$
 
-但是在二进制塔域中，即使你进行分割，上面的性质依然成立。其原因和二进制域可以分割的特性有关：如果用一个大值诚意一个小值，则每个分片上的操作会继续保留。如果我们用 $11$ 乘上 $1100101010001111$ ，这与我们先分解 $1100101010001111$ 再分别乘上 $11$ 是相等的 $11+10 \times x_2+10 \times x_2x_1+10 \times x_3+11 \times x_2x_3+11 \times x_1x_2x_3$
+但是在二进制塔域中，即使你进行分割，上面的性质依然成立。其原因和二进制域可以分割的特性有关：如果用一个大值乘以一个小值，则每个分片上的操作会继续保留。如果我们用 $11$ 乘上 $1100101010001111$ ，这与我们先分解 $1100101010001111$ 再分别乘上 $11$ 是相等的 $11+10 \times x_2+10 \times x_2x_1+10 \times x_3+11 \times x_2x_3+11 \times x_1x_2x_3$
 
 > But in binary fields built with the tower construction, this kind of thing *does* work. The reason why has to do with their separability: if you multiply a big value by a small value, what happens in each segment, stays in each segment. If we multiply $1100101010001111$ by $11$, that's the same as first decomposing $1100101010001111$ into $11+10 \times x_2+10 \times x_2x_1+10 \times x_3+11 \times x_2x_3+11 \times x_1x_2x_3$ , and then multiplying each component by $11$ separately.
 
